@@ -1,8 +1,13 @@
+const body = document.body
+let div = document.createElement("div")
+
+var list = document.getElementById('demo');
 
 let playerSelection = ""; 
 
 let playerScore = 0;
 let computerScore = 0;
+let roundCount = 0;
 
 function getComputerChoice() {
     let arr = ["rock", "paper", "scissors"];
@@ -31,17 +36,35 @@ function game(playerSelection) {
     let computerSelection = getComputerChoice();
     let result = playRound(playerSelection, computerSelection);
 
-    if (result === "player") {
-        console.log("You win this round!");
-        playerScore += 1;
-    } else if (result === "computer") {
-        console.log("Computer wins this round!");
-        computerScore += 1;
-    } else {
-        console.log("It's a tie!");
-    }
+    let resultMessage = document.createElement("li")
 
-    console.log(`Player Score: ${playerScore}, Computer Score: ${computerScore}`);
+    if (roundCount < 5)
+        if (result === "player") {
+            playerScore += 1;
+            roundCount += 1;
+            resultMessage.textContent = "You win this round!";
+            list.append(resultMessage);
+        } else if (result === "computer") {
+            computerScore += 1;
+            roundCount += 1;
+            resultMessage.textContent = "Computer wins this round!";
+            list.append(resultMessage);
+        } else {
+            roundCount += 1;
+            resultMessage.textContent = "It's a tie!";
+            list.append(resultMessage);
+        }
+        /* console.log(`Player Score: ${playerScore}, Computer Score: ${computerScore}`); */
+
+        if (roundCount == 5 && playerScore > computerScore) {
+            div.innerText = "Player wins the match!"
+            body.append(div)
+        } else if (roundCount == 5 && computerScore > playerScore) {
+            div.innerText = "Computer wins the match!"
+            div.append
+            body.append(div)
+        }
+
 }
 
 const buttons = document.querySelectorAll("#button1, #button2, #button3");
