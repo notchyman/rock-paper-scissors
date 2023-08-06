@@ -1,0 +1,41 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ff0000, #00ff00); /* Replace these colors with your desired gradient */
+    /* You can adjust the gradient direction and colors to your preference */
+}
+
+.columns-3 {
+    width: 100%;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+
+}
+
+.columns-3 > * {
+    width: 33.33%; /* Change to 33.33% to make three equally sized columns */
+    height: 100vh;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Set the background color of the columns, use rgba to add transparency if needed */
+}
+
+#buttonBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Center buttons horizontally within #buttonBox */
+}
+
+#buttonListContainer {
+    display: flex;
+    flex-direction: column; /* Place buttons and list in a column */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Add space between buttons and list */
+}
+
+#buttonBox button {
+    flex: 1; /* Allow buttons to grow and occupy equal space within the row */
+}

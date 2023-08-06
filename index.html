@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
-</head>
-<body>    
-    <button id="button1">Rock</button>
-    <button id="button2">Paper</button>
-    <button id="button3">Scissors</button>
-    <ol id="demo"></ol>
+  </head>
+  <body>
+    <div class="columns-3">
+      <div class="bg-red">
+        <div id="displayPlayerScore"></div>
+      </div>
+      <div class="bg-pink">
+        <div id="buttonListContainer">
+          <div id="buttonBox">
+            <button id="button1">Rock</button>
+            <button id="button2">Paper</button>
+            <button id="button3">Scissors</button>
+          </div>
+          <div id="gameBox">
+            <div id="list"></div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-orange">
+        <div id="displayComputerScore"></div>
+      </div>
+    </div>
+    
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
