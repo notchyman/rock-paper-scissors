@@ -2,16 +2,20 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #ff0000, #00ff00); /* Replace these colors with your desired gradient */
-    /* You can adjust the gradient direction and colors to your preference */
+    background: linear-gradient(to right, #ff0000, #00ff00);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button {
+    font-size: 30px;
+    margin: 10px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .columns-3 {
     width: 100%;
     display: flex;
-    align-items: center;  
     justify-content: center;
-
 }
 
 .columns-3 > * {
@@ -26,16 +30,38 @@ html, body {
 #buttonBox {
     display: flex;
     flex-direction: row;
-    align-items: center; /* Center buttons horizontally within #buttonBox */
+    margin: 20px;
+    bottom: 66%;
+    position: fixed;
 }
 
 #buttonListContainer {
     display: flex;
     flex-direction: column; /* Place buttons and list in a column */
     align-items: center; /* Center items horizontally */
-    justify-content: center; /* Add space between buttons and list */
+    justify-content: center;
 }
 
 #buttonBox button {
     flex: 1; /* Allow buttons to grow and occupy equal space within the row */
+}
+
+#gameBox {
+    font-weight: 700;
+}
+
+li {
+    margin: 20px;
+}
+
+#displayPlayerScore,
+#displayComputerScore {
+    font-size: 150px;
+    font-weight: 500;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: auto;
+    padding-right: auto;
+    border: 2px solid black;
+    align-self: center;
 }

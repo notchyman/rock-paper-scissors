@@ -42,8 +42,6 @@ function game(playerSelection) {
   document.getElementById("displayPlayerScore").innerHTML = playerScore;
   document.getElementById("displayComputerScore").innerHTML = computerScore;
 
-
-
   if (roundCount < 5)
     if (result === "player") {
       playerScore += 1;
